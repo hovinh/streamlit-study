@@ -42,7 +42,9 @@ st.write(x, 'squared is', x * x)
   - @st.cache_data: serializable object, should work on most cases.
   - @st.cache_resource: global resources like ML models or database connection.
 
-- Page routing:
+- Page routing: create `pages` folder. Those scripts within will show up in side bar.
+
+- Static file serving: typically st.image<path to image> handle for you, but if you want a direct URL to a file, you need to host it in static folder.
 
 - Secret management: in secrets.toml file, then it's accessible via st.secrets.
 
@@ -56,7 +58,7 @@ your-repo/
     |-- config.toml
 ```
 
-Have an account in https://share.streamlit.io/ and click "New app". You can change to a custom subdomain. I tried to deploy `layout_test.py`.
+Have an account in https://share.streamlit.io/ and click "New app". Advanced option allows to pick python version. You can change to a custom subdomain. I tried to deploy `layout_test.py`. If there error during setup, the build process auto hook and rebuild. Check `Manage App` on bottom left for build progress. If deployed and no progress, do reboot.
 
 ## Note:
 
